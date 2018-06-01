@@ -93,7 +93,8 @@ simpleHttpClientFactory.newClient = function (config) {
       var client = _axios2.default.create(simpleHttpRequest);
       (0, _axiosRetry2.default)(client, {
         retries: config.retries,
-        retryCondition: config.retryCondition
+        retryCondition: config.retryCondition,
+        timeout: config.timeout
       });
       return client.request({ method: verb });
     }

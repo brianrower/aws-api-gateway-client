@@ -78,7 +78,8 @@ apigClientFactory.newClient = (config = {}) => {
     defaultContentType: config.defaultContentType,
     defaultAcceptType: config.defaultAcceptType,
     retries: config.retries,
-    retryCondition: config.retryCondition
+    retryCondition: config.retryCondition,
+    timeout: config.timeout
   };
 
   const apiGatewayClient = apiGatewayClientFactory.newClient(

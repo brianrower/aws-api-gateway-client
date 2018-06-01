@@ -79,7 +79,8 @@ simpleHttpClientFactory.newClient = (config) => {
       let client = axios.create(simpleHttpRequest);
       axiosRetry(client, {
         retries: config.retries,
-        retryCondition: config.retryCondition
+        retryCondition: config.retryCondition,
+        timeout: config.timeout
       });
       return client.request({method: verb});
     }

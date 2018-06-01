@@ -89,7 +89,8 @@ apigClientFactory.newClient = function () {
     defaultContentType: config.defaultContentType,
     defaultAcceptType: config.defaultAcceptType,
     retries: config.retries,
-    retryCondition: config.retryCondition
+    retryCondition: config.retryCondition,
+    timeout: config.timeout
   };
 
   var apiGatewayClient = _apiGatewayClient2.default.newClient(simpleHttpClientConfig, sigV4ClientConfig);
